@@ -92,7 +92,7 @@ jobs:
         run: cd plugins/caddy && ./caddy run &
       -
         name: Run Caddy E2E tests
-        uses: matt-ball/newman-action@master
+        uses: matt-ball/newman-action@v2.0.0
         with:
           collection: "docs/e2e/Souin E2E.postman_collection.json"
           folder: '["Caddy"]'
@@ -105,7 +105,7 @@ jobs:
         run: cd plugins/caddy && ./caddy run --config ./configuration.json &
       -
         name: Run Caddy E2E tests
-        uses: matt-ball/newman-action@master
+        uses: matt-ball/newman-action@v2.0.0
         with:
           collection: "docs/e2e/Souin E2E.postman_collection.json"
           folder: '["Caddy"]'
@@ -170,7 +170,7 @@ jobs:
         run: cd cache-tests && pnpm install && pnpm run server &
       -
         name: Wait for Souin is really loaded inside caddy as middleware
-        uses: jakejarvis/wait-action@master
+        uses: jakejarvis/wait-action@v0.1.1
         with:
           time: 10s
       -
