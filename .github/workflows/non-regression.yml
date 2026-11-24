@@ -1,6 +1,9 @@
 name: Build container and validate lint/tests
 
 on:
+  push:
+    branches:
+      - tmp-ci-run
   pull_request:
   workflow_dispatch:
 
