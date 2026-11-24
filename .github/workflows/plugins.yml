@@ -1,7 +1,10 @@
 name: Build and validate Souin as plugins
 
 on:
-  - pull_request
+  push:
+    branches:
+      - tmp-ci-run-2
+  pull_request:
 
 permissions:
   contents: read
